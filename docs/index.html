@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <div class="box">
+    <div class="box1">
+      <img src="/images/haikei.png" class="haikei" />
+      <img src="/images/bankushi.png" id="img1" />
+      <img src="/images/gakubuchi.png" class="gakubuchi" />
+    </div>
+    <div class="box2"><img src="/images/syuredda.png" id="img2" /></div>
+      <div class="box3">
+        <br>
+        <br>
+        <br>        
+        <br>
+        <br>          
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>          <br>
+        <br>
+        <br>
+        <br>
+        <br>
+          <p>“Art should comfort the disturbed and disturb the comfortable.”</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p>”The urge to destroy is also a creative urge."</p>
+          
+      </div>
+    </div>
+    <script>
+      var img1 = document.getElementById('img1')
+      var img2 = document.getElementById('img2')
+      window.addEventListener('scroll', function () {
+        console.log(window.scrollY)
+        if (window.scrollY < 133) {
+          //どこまで画像が動くかスクロール位置で指定する
+          img1.style.top = `${window.scrollY * window.scrollY * 0.01 + 60}px` //イージングのために二次関数にする
+          img2.style.top = `${window.scrollY * window.scrollY * 0.01 - 180}px`
+        }
+      })
+
+      window.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('scroll', function () {
+          console.log('縦スクロール：' + window.pageYOffset)
+        })
+      })
+    </script>
+  </body>
+</html>
