@@ -3,7 +3,8 @@
     padding: 0;
 }
 body{
-    height: 3000px;
+    height: 2400px;
+
 }
 
 /* .box {
@@ -11,14 +12,14 @@ body{
 } */
 p {
     font-family: serif;
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
 }
 .box1{
     width: calc(692px/2);
     height: calc(883px/2);
     background-color: antiquewhite;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     top: 300px;
     left: 50%;
@@ -28,7 +29,7 @@ p {
     width: calc(692px/2);
     height: 400px;
     /* background-color: rosybrown; */
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     top: 721px;
     left:50%;
@@ -36,10 +37,12 @@ p {
 }
 
 .box3{
-    width: 700px;
+    width: 800px;
     height: 400px;
+    max-width: 100%;
+    height: auto;
     position: absolute;
-    top: 800px;
+    top: 1110px;
     left:50%;
     transform: translate(-50%, -50%);
 }
@@ -60,11 +63,11 @@ p {
 }
 
 .haikei{
-    width: 100%;
+    width: 70%;
     height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50px;
+    left: 50px;
     z-index: 0;
 }
 
@@ -77,3 +80,15 @@ p {
     z-index: 200;
 }
 
+.text{
+    opacity: 0.001;
+    transition: all 1.5s;
+}
+
+.text.blockIn {
+    opacity: 1;
+  }
+
+.urge {
+    font-size: 30px;
+}
